@@ -1,0 +1,48 @@
+# Secrets and config
+.env
+.env.local
+*.pem
+*.key
+config/settings.yaml
+config/schema.yaml
+
+# Data — everything except the curated sample corpus
+data/raw/
+data/processed/
+data/db.sqlite*
+data/chroma/
+data/neo4j/
+data/backups/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Models (large binary downloads)
+models/
+*.gguf
+*.bin
+*.safetensors

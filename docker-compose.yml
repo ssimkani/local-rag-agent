@@ -1,0 +1,14 @@
+services:
+  neo4j:
+    image: neo4j:5-community
+    container_name: km-rag-neo4j
+    ports:
+      - "127.0.0.1:7474:7474"  # browser
+      - "127.0.0.1:7687:7687"  # bolt
+    environment:
+      - NEO4J_AUTH=neo4j/changeme-please
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - ./data/neo4j/data:/data
+      - ./data/neo4j/logs:/logs
+    restart: unless-stopped
